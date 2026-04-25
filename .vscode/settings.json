@@ -1,8 +1,0 @@
-{
-    "editor.renderLineHighlight": "none",
-    "editor.renderLineHighlightOnlyWhenFocus": false,
-    "cSpell.words": [
-        "фотолокации"
-    ],
-    "livePreview.defaultPreviewPath": "/index.html"
-}
