@@ -157,22 +157,6 @@
                 </ul>
             </form>
             <p id="total-price">Сумма: 0 рублей</p>
-            <script>
-            const checkboxes = document.querySelectorAll('input[name="services"]');
-            const totalPriceElement = document.getElementById('total-price');
-
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', () => {
-                    let totalPrice = 0;
-                    checkboxes.forEach(checkbox => {
-                        if (checkbox.checked) {
-                            totalPrice += parseInt(checkbox.getAttribute('data-price'));
-                        }
-                    });
-                    totalPriceElement.textContent = `Сумма: ${totalPrice} рублей`;
-                });
-            });
-            </script>
         </section>
 
         <section>
@@ -279,5 +263,22 @@
     <footer>
         <p>2023 год, Авторская экскурсия по Санкт-Петербургу</p>
     </footer>
+
+    <script>
+        const checkboxes = document.querySelectorAll('input[name="services"]');
+        const totalPriceElement = document.getElementById('total-price');
+
+        checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            let totalPrice = 0;
+            checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                totalPrice += parseInt(checkbox.getAttribute('data-price'));
+            }
+            });
+            totalPriceElement.textContent = `Сумма: ${totalPrice} рублей`;
+            });
+        });
+    </script>
 </body>
 </html>
