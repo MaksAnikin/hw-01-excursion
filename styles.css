@@ -106,4 +106,41 @@
 .reviews-item-content {
     align-self: center;
 }
+/* "Встань ровно по центру коробки (по высоте), */
+/* даже если все остальные прижаты к верху или низу" */
+/*  Работает ТОЛЬКО внутри display: flex или display: grid */
+
+.reviews-item-text-wrapper {
+    font-size: 16px;
+}
+
+.reviews-item-author {
+    font-size: 16px;
+}
+
+.contacts-text-wrapper {
+    font-size: 16px;
+}
+
+.contacts-form-bottom {
+    justify-content: space-between; /* Элементы по краям, место между ними */
+    align-items: center;            /* Все выровнены по центру высоты */
+}
+/* Работает ТОЛЬКО внутри контейнера display: flex; или display: grid; */
+
+.contacts-tariff-label {
+    font-weight: 700;
+}
+
+.contacts-address {
+    font: inherit; 
+}
+/* наследует все настройки шрифта от своего родительского блока. */
+
+.contacts-btn {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: none; /* убирает подчеркивание у ссылок */
+}
 
