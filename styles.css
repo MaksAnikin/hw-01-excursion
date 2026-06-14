@@ -144,3 +144,19 @@
     text-decoration: none; /* убирает подчеркивание у ссылок */
 }
 
+.contacts-btn:hover::after {
+    opacity: 0.5;
+}
+
+.sidebar-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.sidebar-list {
+    list-style-type: none;
+}
+
+.card-image-link:hover {
+    opacity: 0.5;
+}
