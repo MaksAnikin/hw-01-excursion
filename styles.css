@@ -47,6 +47,14 @@
     font-weight: 700;
 }
 
+.program-image-wrapper {
+    overflow: hidden;    /* overflow — что делать с выходящим контентом */
+}                        /* hidden — обрезать всё, что за пределами контейнера */
+
+.program-image {
+    object-fit: cover;   /*object-fit — как картинка ведёт себя внутри контейнера*/
+}                        /*cover — заполнить контейнер (обрезает края, сохраняет пропорции*/
+
 .program-subtitle {
     font-size: 24px;
 }
@@ -54,6 +62,14 @@
 .auditory-title {
     font-size: 40px;
     font-weight: 700;
+}
+
+.auditory-image-wrapper {
+    overflow: hidden;
+}
+
+.auditory-image {
+    object-fit: cover;
 }
 
 .prices-title {
