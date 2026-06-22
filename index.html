@@ -176,49 +176,90 @@
                                     В зависимости от ваших предпочтений и потребностей, вы можете выбрать опцию трансфера, питания или сопровождения.
                                 </p>
                             </div>
-                            <form action="">
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" name="services" id="transfer" value="transfer" data-price="100">
-                                        <label for="transfer">Трансфер до места начала экскурсии</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="services" id="disabled_transfer" value="disabled_transfer" data-price="100">
-                                        <label for="disabled_transfer">Трансфер для людей из маломобильных групп населения</label>
-                                    </li>
-                                    
-                                    <li>
-                                        <input type="checkbox" name="services" id="breakfast" value="Breakfast" data-price="100">
-                                        <label for="breakfast">Завтрак</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="services" id="lunch" value="lunch" data-price="100">
-                                        <label for="lunch">Обед</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="services" id="dinner" value="dinner" data-price="100">
-                                        <label for="dinner">Ужин</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="services" id="translator_english" value="translator_english" data-price="100">
-                                        <label for="translator_english">Переводчик с русского на английский</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="services" id="Sign_language_interpreter" value="Sign_language_interpreter" data-price="100">
-                                        <label for="Sign_language_interpreter">Сурдопереводчик</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="services" id="children_guide" value="children_guide" data-price="100">
-                                        <label for="children_guide">Экскурсовод для детей</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" name="services" id="photographer" value="photographer" data-price="100">
-                                        <label for="photographer">Фотосессия с профессиональным фотографом</label>
-                                    </li>
-                                </ul>
-                            </form>
+                            <div class="services-row">
+                                <div class="services-left">
+                                    <form class="services-form" method="post" action="/">
+                                        <ul class="services-list">
+                                            <li>
+                                                <input type="checkbox" 
+                                                        name="services" 
+                                                        id="transfer" 
+                                                        value="transfer" 
+                                                        data-price="100">
+                                                <label for="transfer">Трансфер до места начала экскурсии</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" 
+                                                        name="services" 
+                                                        id="disabled_transfer" 
+                                                        value="disabled_transfer" 
+                                                        data-price="100">
+                                                <label for="disabled_transfer">Трансфер для людей из маломобильных групп населения</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" 
+                                                        name="services" 
+                                                        id="breakfast" 
+                                                        value="breakfast" 
+                                                        data-price="100">
+                                                <label for="breakfast">Завтрак</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" 
+                                                        name="services" 
+                                                        id="lunch" 
+                                                        value="lunch" 
+                                                        data-price="100">
+                                                <label for="lunch">Обед</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" 
+                                                        name="services" 
+                                                        id="dinner" 
+                                                        value="dinner" 
+                                                        data-price="100">
+                                                <label for="dinner">Ужин</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" 
+                                                        name="services" 
+                                                        id="translator" 
+                                                        value="translator" 
+                                                        data-price="100">
+                                                <label for="translator">Переводчик с русского на английский язык</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" 
+                                                        name="services" 
+                                                        id="children_guide" 
+                                                        value="children_guide" 
+                                                        data-price="100">
+                                                <label for="children_guide">Экскурсовод для детей</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" 
+                                                        name="services" 
+                                                        id="sign_language_interpreter" 
+                                                        value="sign_language_interpreter" 
+                                                        data-price="100">
+                                                <label for="sign_language_interpreter">Сурдопереводчик</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" 
+                                                        name="services" 
+                                                        id="photographer" 
+                                                        value="photographer" 
+                                                        data-price="100">
+                                                <label for="photographer">Фотосессия с профессиональным фотографом</label>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                                <div class="services-right">
+                                    <div class="services-price" id="total-price">Сумма: 0 рублей</div>
+                                </div>
+                            </div>
                         </div>
-                        <p id="total-price">Сумма: 0 рублей</p>
                     </section>
 
                     <section>
