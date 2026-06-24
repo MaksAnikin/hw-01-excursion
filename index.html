@@ -263,7 +263,7 @@
                     </section>
 
                     <section class="page-section reviews">
-                        <h2 class="reviews-title">Отзывы участников</h2>
+                        <h2 class="reviews-title">Отзывы клиентов</h2>
 
                         <article class="reviews-item">
                             <div class="reviews-item-image-wrapper">
@@ -316,7 +316,7 @@
                             <div class="reviews-item-content">
                                 <div class="reviews-item-text-wrapper">
                                     <p>
-                                        Мы просто влюбились в Санкт-Петербург благодаря этой экскурсии! Суперский  гид рассказал нам удивительные истории о городе и его жителях. Отдельно отмечу маршрут. Не первый раз в Питере, но эти локации увидел впервые. Класс!
+                                        Мы просто влюбились в Санкт-Петербург благодаря этой экскурсии! Суперский гид рассказал нам удивительные истории о городе и его жителях. Отдельно отмечу маршрут. Не первый раз в Питере, но эти локации увидел впервые. Класс!
                                     </p>
                                 </div>
                                 <div class="reviews-item-author">
@@ -326,30 +326,35 @@
                         </article>
                     </section>
 
-                    <section>
-                        <h2>Как записаться на экскурсию</h2>
-                        <p>
-                            Для подробной информации заполните форму.<br />
-                            Наши менеджеры с вами свяжутся.
-                        </p>
-                        <form action="">
-                            <input type="text" placeholder="Имя"><br>
-                            <input type="text" placeholder="Фамилия"><br>
-                            <input type="email" placeholder="E-mail"><br>
-                            <input type="tel" placeholder="Номер телефона"><br>
-                            
-                            <label for="tariff">Выберите тариф</label>
-                            <select name="tariff" id="tariff">
-                                <option value="economy">Эконом</option>
-                                <option value="comfort">Комфорт</option>
-                                <option value="premium">Премиум</option>
-                                <option value="Lux">Люкс</option>
-                            </select>
-                            <br>
-                            <button type="submit">Отправить</button>
-                        </form>
-                        <address id="contacts">
-                            <a href="https://t.me/Maks_Anikin13">Свяжитесь с автором экскурсии</a>
+                    <section class="page-section contacts" id="contacts">
+                        <div class="contacts-content">
+                            <div class="contacts-text-wrapper">
+                                <p>
+                                    Для подробной информации заполните форму. Наши менеджеры с вами свяжутся.
+                                </p>
+                            </div>
+                            <form class="contacts-form" method="post" action="/">
+                                <input type="text" placeholder="Имя"><br>
+                                <input type="text" placeholder="Фамилия"><br>
+                                <input type="email" placeholder="E-mail"><br>
+                                <input type="tel" placeholder="Номер телефона"><br>
+                                <button type="submit">Отправить</button>
+    
+                                <div class="contacts-form-bottom">
+                                    <label class="contacts-tariff-label" for="tariff">Выберите тариф</label>
+                                    <select class="contacts-select" name="tariff" id="tariff">
+                                        <option value="economy">Эконом</option>
+                                        <option value="comfort">Комфорт</option>
+                                        <option value="premium" selected>Премиум</option>
+                                        <option value="luxury">Люкс</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <address class="contacts-address">
+                            <a class="contacts-btn" href="#" target="_blank">
+                                Свяжитесь с автором
+                            </a>
                         </address>
                     </section>
                 </div>
