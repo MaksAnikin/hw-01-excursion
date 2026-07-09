@@ -26,6 +26,7 @@
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     color: #000;
+    background-color: #fff;
 }
 
 /* ============================================
@@ -52,6 +53,26 @@
 /* Используется как фоновое изображение элемента */
 .page-content {
     background-image: linear-gradient(90deg, #fff 50%, #242424 50%);
+}
+
+/* ============================================
+   СЕКЦИЯ: PAGE SECTION (ОБЩИЕ СТИЛИ)
+   ============================================ */
+
+/* Делаем секцию "якорем" для абсолютных элементов */
+.page-section {
+    position: relative;
+}
+
+/* Создаём серую подложку на правой половине */
+.page-section-with-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;                    /* ← Эту строку добавляем */
+    background-color: #9D9D9D;    /* ← И эту строку добавляем */
 }
 
 /* ============================================
