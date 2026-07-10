@@ -34,7 +34,7 @@
    ============================================ */
 
 .intro {
-    background-image: url(./images/intro.png);
+    background-image: url('./images/intro.png');
     color: #fff;
 }
 
@@ -84,15 +84,17 @@
     font-weight: 700;
 }
 
-/* overflow — что делать с выходящим контентом */
-/* hidden — обрезать всё, что за пределами контейнера */
+/* Обертка для картинки — задает границы и обрезает всё лишнее */
+/* overflow: hidden — скрывает контент, выходящий за пределы блока */
 .program-image-wrapper {
     overflow: hidden;
 }
 
-/*object-fit — как картинка ведёт себя внутри контейнера*/
-/*cover — заполнить контейнер (обрезает края, сохраняет пропорции*/
+/* Сама картинка — заполняет обертку без искажений */
+/* display: block — убирает нижний отступ (3-4px) у inline-элементов */
+/* object-fit: cover — заполняет контейнер, сохраняя пропорции (лишнее обрезается) */
 .program-image {
+    display: block;
     object-fit: cover;
 }
 
@@ -114,6 +116,7 @@
 }
 
 .auditory-image {
+    display: block;
     object-fit: cover;
 }
 
@@ -207,6 +210,15 @@
     font-size: 16px;
 }
 
+.reviews-item-image-wrapper {
+    overflow: hidden;
+}
+
+.reviews-item-image {
+    display: block;
+    object-fit: cover;
+}
+
 /* ============================================
    СЕКЦИЯ: CONTACTS
    ============================================ */
@@ -266,3 +278,14 @@
 .card-image-link:hover {
     opacity: 0.5;
 }
+
+.card-image-link {
+    display: block;
+    overflow: hidden;
+}
+
+.card-image {
+    display: block;
+    object-fit: cover;
+}
+
