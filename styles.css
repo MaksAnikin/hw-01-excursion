@@ -30,37 +30,58 @@
 
 .page-body {
     min-height: 100%;
+    margin: 0;
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     color: #000;
     background-color: #fff;
 }
 
+.page-header {
+    padding: 20px 0;
+}
+
 .container {
     width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
 }
 
 /* ============================================
    СЕКЦИЯ: INTRO
    ============================================ */
 
+.intro .container {            /*Применяется ТОЛЬКО к .container внутри .intro.*/
+    padding-right: 550px;      /*Другие .container на странице НЕ затронуты.*/
+}
+
 .intro {
-    height: 610px;
+    min-height: 610px;
     background-image: url('./images/intro.png');  /* Фоновая картинка */
     background-size: cover;         /* Картинка заполняет весь блок, сохраняя пропорции */
     background-position: center;    /* Центрируем картинку */
-    box-sizing: border-box;         /* Padding включается в общую ширину/высоту */
     color: #fff;                  /* Белый текст на фоне картинки */
+    padding-top: 180px;
+    padding-bottom: 120px;
+    box-sizing: border-box;         /* Padding включается в общую ширину/высоту */
 }
 
 .intro-title {
+    margin: 0;
+    margin-bottom: 30px;
     font-size: 50px;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
 }
 
+.intro-text-wrapper p {
+    margin: 0;
+}
 
-
+.intro-text-wrapper p:not(:last-child) { /* Отступ снизу 20px всем абзацам <p> внутри*/
+    margin-bottom: 20px;                 /* .intro-text-wrapper, КРОМЕ последнего. */
+}
 
 /* ============================================
    СЕКЦИЯ: PAGE CONTENT
@@ -99,8 +120,22 @@
    ============================================ */
 
 .program-title {
+    margin: 0;
+    margin-bottom: 30px;
     font-size: 40px;
     font-weight: 700;
+}
+
+.program-text-wrapper p {
+    margin: 0;
+}
+
+.program-text-wrapper p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.program-row {
+    margin-top: 30px;
 }
 
 /* Обертка для картинки — задает границы и обрезает всё лишнее */
@@ -123,14 +158,31 @@
 }
 
 .program-subtitle {
+    margin: 0;
+    margin-bottom: 20px;
     font-size: 24px;
+}
+
+.program-list {
+    margin: 0;
+}
+
+.program-list li:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 /* ============================================
    СЕКЦИЯ: AUDITORY
    ============================================ */
 
-.auditory-title {
+.auditory-content {
+    position: relative;
+    z-index: 1;
+}
+
+   .auditory-title {
+    margin: 0;
+    margin-bottom: 30px;
     font-size: 40px;
     font-weight: 700;
 }
@@ -148,32 +200,49 @@
     object-fit: cover;
 }
 
-.auditory-content {
-    position: relative;
-    z-index: 1;
+.auditory-bottom {
+    margin-top: 30px;
 }
+
+.auditory-list {
+    margin: 0;
+}
+
 
 /* ============================================
    СЕКЦИЯ: PRICES
    ============================================ */
 
 .prices-title {
+    margin: 0;
+    margin-bottom: 30px;
     font-size: 40px;
     font-weight: 700;
 }
 
+.prices-text-wrapper {
+    margin: 0;
+}
+
+.prices-text-wrapper p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
 .prices-table {
     width: 100%;
+    margin-top: 30px;
     border-collapse: collapse;
 }
 
 .prices-table th {
+    padding: 20px;
     font-weight: 700;
     color: #fff;
     text-align: left;
 }
 
 .prices-table td {
+    padding: 20px;
     font-size: 16px;
 }
 
@@ -188,13 +257,14 @@
 }
 
 .prices-caption {
+    margin-top: 10px;
     font-size: 14px;
     color: #9d9d9d;
 }
 
 /* Убираем дефолтные отступы у параграфа внутри этого блока */
-/*этого нет в эталонном решении - я сам решил оборачивать текст*/
-/*в тег <p>, а затем в css отменять дофолтный отступ*/
+/*этого нет в эталонном решении - я сам решил обернуть текст*/
+/*в тег <p>, а затем - отменить дофолтный отступ - margin: 0;*/
 .prices-caption p {
     margin: 0;
 }
@@ -209,20 +279,27 @@
    }
 
 .services-title {
+    margin: 0;
+    margin-bottom: 30px;
     font-size: 40px;
     font-weight: 700;
 }
 
-/*СБРОС ДЕФОЛТНЫХ СТИЛЕЙ У <p> в .services-text*/
-.services-text p {
-    margin: 0;  /* Убираем стандартные отступы браузера (1em сверху и снизу) */
-                /* Иначе текст будет слишком далеко от заголовка и формы */
+
+.services-text-wrapper p {  /*СБРОС ДЕФОЛТНЫХ СТИЛЕЙ У <p> в .services-text*/
+    margin: 0;              /* Убираем стандартные отступы браузера (1em сверху и снизу) */
+}
+
+.services-text-wrapper p:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 /* Убирает только визуальный маркер, не сбрасывает отступы (padding-left у ul/ol остаётся) */
 /* Для полного сброса стиля списка обычно добавляют padding: 0; margin: 0; */
 /* Нужен для - создания навигационных меню без лишних точек/цифр */
 .services-list {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
@@ -238,6 +315,8 @@
 /* white-space: nowrap - означает буквально "пробелы НЕ переносить";
 текст не переносится, идет одной строкой до конца */
 .services-price {
+    margin-top: auto;
+    padding: 20px;
     border-radius: 15px;
     color: #fff;
     font-size: 20px;
@@ -265,6 +344,10 @@
     border-radius: 20px;
 }
 
+.reviews-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
 /* "Встань ровно по центру коробки (по высоте), */
 /* даже если все остальные прижаты к верху или низу" */
 /*  Работает ТОЛЬКО внутри display: flex или display: grid */
@@ -276,7 +359,16 @@
     font-size: 16px;
 }
 
+.reviews-item-text-wrapper p {
+    margin: 0;
+}
+
+.reviews-item-text-wrapper p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
 .reviews-item-author {
+    margin-top: 20px;
     font-size: 16px;
 }
 
