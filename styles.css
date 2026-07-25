@@ -285,6 +285,9 @@
     font-weight: 700;
 }
 
+.services-text-wrapper {    /*добавил САМОСТОЯТЕЛЬНО*/ 
+    margin-bottom: 30px;
+}
 
 .services-text-wrapper p {  /*СБРОС ДЕФОЛТНЫХ СТИЛЕЙ У <p> в .services-text*/
     margin: 0;              /* Убираем стандартные отступы браузера (1em сверху и снизу) */
@@ -327,8 +330,6 @@
 /* ============================================
    СЕКЦИЯ: REVIEWS
    ============================================ */
-
-
 
 .reviews-content {
     position: relative;
@@ -390,7 +391,12 @@
    СЕКЦИЯ: CONTACTS
    ============================================ */
 
-.contacts-content {
+.page-section.contacts {    /* селектор применяется к элементу, у которого*/
+    padding-top: 0;         /* есть ОБА класса (page-section и contacts) одновременно - */
+    padding-bottom: 80px;
+}
+
+   .contacts-content {
     border-radius: 20px;
     position: relative;    /* Нужно для работы z-index */
     z-index: 1;            /* Контент поверх серой подложки (::before) */
@@ -400,8 +406,17 @@
     font-size: 16px;
 }
 
+.contacts-text-wrapper p {
+    margin: 0;
+}
+
+.contacts-text-wrapper p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
 /* Flexbox-контейнер для нижней части формы (label + select) */
 .contacts-form-bottom {
+    margin-top: 30px;
     display: flex;                  /* Включаем flexbox: дочерние элементы выстраиваются в ряд */
     justify-content: space-between; /* Элементы по краям, место между ними */
     align-items: center;            /* Все выровнены по центру высоты */
@@ -413,6 +428,7 @@
 
 /* наследует все настройки шрифта от своего родительского блока. */
 .contacts-address {
+    margin-top: 40px;
     font: inherit;
 }
 
@@ -422,6 +438,8 @@
     display: flex;                  /* Flex-контейнер */
     justify-content: space-between; /* Распределяет содержимое */
     border-radius: 15px;
+    padding: 20px 40px;
+    padding-right: 80px;
     color: #fff;                  /* Белый цвет текста */
     font-size: 40px;                /* Размер шрифта */
     font-weight: 700;               /* Жирный шрифт */
@@ -457,15 +475,20 @@
    ============================================ */
 
 .sidebar {
+    padding: 40px 0 40px 20px;
     color: #fff;
 }
 
 .sidebar-title {
+    margin: 0;
+    margin-bottom: 20px;
     font-size: 30px;
     font-weight: 700;
 }
 
 .sidebar-list {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
@@ -489,6 +512,8 @@
 }
 
 .card-image-title {
+    margin: 0;
+    margin-top: 10px;
     font-size: 16px;
     font-weight: 400;
 }
@@ -508,7 +533,12 @@
    ============================================ */
 
 .page-footer {
+    padding: 30px 0;
     color: #000000;
+}
+
+.page-footer .container {
+    padding-right: 390px;
 }
 
 .copyright {
