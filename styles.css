@@ -94,6 +94,15 @@
     background-image: linear-gradient(90deg, #fff 50%, #242424 50%);
 }
 
+/* Двухколоночная сетка для контента внутри .page-content .container. */
+/* Прямые потомки автоматически распределяются по колонкам: */
+/* 1) .page-main-column — основная секция (1fr, т.е. занимает всё оставшееся место) */
+/* 2) .page-aside.sidebar — блок "Другие экскурсии" (всегда 260px) */
+.page-content .container {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+}
+
 /* ============================================
    СЕКЦИЯ: PAGE SECTION (ОБЩИЕ СТИЛИ)
    ============================================ */
@@ -134,7 +143,11 @@
     margin-bottom: 10px;
 }
 
+/* Сетка из 2-х колонок: .program-left (440px) и .program-right (1fr)*/
 .program-row {
+    display: grid;
+    grid-template-columns: 440px 1fr;
+    gap: 40px;
     margin-top: 30px;
 }
 
@@ -151,9 +164,9 @@
 /* display: block — убирает нижний отступ (3-4px) у inline-элементов */
 /* object-fit: cover — заполняет контейнер, сохраняя пропорции (лишнее обрезается) */
 .program-image {
+    display: block;
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
 }
 
@@ -180,11 +193,18 @@
     z-index: 1;
 }
 
-   .auditory-title {
+.auditory-title {
     margin: 0;
     margin-bottom: 30px;
     font-size: 40px;
     font-weight: 700;
+}
+
+/*сетка из 3 колонок - auditory-image-wrapper (по 1 картинке в колонке) */
+.auditory-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .auditory-image-wrapper {
@@ -194,9 +214,9 @@
 }
 
 .auditory-image {
+    display: block;
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
 }
 
@@ -206,6 +226,9 @@
 
 .auditory-list {
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 20px;
 }
 
 
