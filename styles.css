@@ -320,6 +320,13 @@
     margin-bottom: 10px;
 }
 
+.services-row {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 40px;
+    margin-top: 30px;
+}
+
 /* Убирает только визуальный маркер, не сбрасывает отступы (padding-left у ul/ol остаётся) */
 /* Для полного сброса стиля списка обычно добавляют padding: 0; margin: 0; */
 /* Нужен для - создания навигационных меню без лишних точек/цифр */
@@ -419,7 +426,7 @@
     padding-bottom: 80px;
 }
 
-   .contacts-content {
+.contacts-content {
     border-radius: 20px;
     position: relative;    /* Нужно для работы z-index */
     z-index: 1;            /* Контент поверх серой подложки (::before) */
@@ -438,11 +445,13 @@
 }
 
 /* Flexbox-контейнер для нижней части формы (label + select) */
+/* Включаем display: flex - Дочерние элементы выстраиваются в ряд,*/
+/* так как по умолчанию используется flex-direction: row */
 .contacts-form-bottom {
     margin-top: 30px;
-    display: flex;                  /* Включаем flexbox: дочерние элементы выстраиваются в ряд */
+    display: flex;
     justify-content: space-between; /* Элементы по краям, место между ними */
-    align-items: center;            /* Все выровнены по центру высоты */
+    align-items: center;            /* Все выровнены по центру высоты (поперечной оси) */
 }
 
 .contacts-tariff-label {
@@ -516,10 +525,10 @@
 }
 
 .card-image-link {
+    display: block;
     width: 100%;
     height: 160px;
     border-radius: 20px;
-    display: block;
     overflow: hidden;
 }
 
@@ -528,9 +537,9 @@
 }
 
 .card-image {
+    display: block;
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
 }
 
