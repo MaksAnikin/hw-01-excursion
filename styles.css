@@ -374,6 +374,10 @@
 }
 
 .reviews-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 40px;
+    padding: 20px 80px 20px 40px;
     border-radius: 20px;
 }
 
@@ -429,6 +433,7 @@
 }
 
 .contacts-content {
+    padding: 20px 280px 20px 40px;
     border-radius: 20px;
     position: relative;    /* Нужно для работы z-index */
     z-index: 1;            /* Контент поверх серой подложки (::before) */
