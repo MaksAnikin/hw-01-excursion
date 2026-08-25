@@ -244,7 +244,7 @@
     font-weight: 700;
 }
 
-.prices-text-wrapper P {
+.prices-text-wrapper p {
     margin: 0;
 }
 
@@ -361,6 +361,11 @@
 /* ============================================
    СЕКЦИЯ: REVIEWS
    ============================================ */
+
+.page-section.reviews {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
 
 .reviews-content {
     position: relative;
