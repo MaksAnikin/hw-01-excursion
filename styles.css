@@ -49,6 +49,32 @@
 }
 
 /* ============================================
+   СЕКЦИЯ: NAVBAR
+   ============================================ */
+
+.navbar-list {
+    display: flex;
+    align-items: center;      /*расположение по центру поперечной оси*/
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;         /*убирает у элементов списка точки (маркеры)*/
+}
+
+.navbar-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navbar-link {
+    color: #000000;
+    text-decoration: none;      /*убирает подчеркивание*/
+}
+
+.navbar-link:hover {
+    opacity: 0.5;
+}
+
+/* ============================================
    СЕКЦИЯ: INTRO
    ============================================ */
 
