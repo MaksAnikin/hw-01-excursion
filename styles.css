@@ -33,8 +33,8 @@
     margin: 0;
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
+    line-height: 1.4;
     color: #000;
-    background-color: #fff;
 }
 
 .page-header {
@@ -87,6 +87,7 @@
     background-image: url('./images/intro.png');  /* Фоновая картинка */
     background-size: cover;         /* Картинка заполняет весь блок, сохраняя пропорции */
     background-position: center;    /* Центрируем картинку */
+    background-color: #242424;
     color: #fff;                  /* Белый текст на фоне картинки */
     padding-top: 180px;
     padding-bottom: 120px;
@@ -129,6 +130,10 @@
     grid-template-columns: 1fr 260px;
 }
 
+.page-main-column {
+    background-color: #fff;
+}
+
 /* ============================================
    СЕКЦИЯ: PAGE SECTION (ОБЩИЕ СТИЛИ)
    ============================================ */
@@ -147,8 +152,7 @@
     right: 0;
     bottom: 0;
     width: 9999px;
-    /* left: 50%;                       ← добавил эту строку */
-    /* background-color: #9D9D9D;       ← добавил эту строку */
+    background-color: #f2f2f2;
 }
 
 /* ============================================
@@ -286,6 +290,7 @@
 
 .prices-table th {
     padding: 20px;
+    background-color: #242424;
     font-weight: 700;
     color: #fff;
     text-align: left;
@@ -294,6 +299,10 @@
 .prices-table td {
     padding: 20px;
     font-size: 16px;
+}
+
+.prices-table tr:nth-child(odd) td {  /* Выбираем все ячейки <td> в нечётных строках таблицы */
+    background-color: #f2f2f2;      /* Красим их в светло-серый — получается "зебра" для удобства чтения */
 }
 
 .prices-table th:first-child,
@@ -378,6 +387,7 @@
     margin-top: auto;
     padding: 20px;
     border-radius: 15px;
+    background-color: #242424;
     color: #fff;
     font-size: 20px;
     font-weight: 700;
@@ -411,6 +421,7 @@
     gap: 40px;
     padding: 20px 80px 20px 40px;
     border-radius: 20px;
+    background-color: #f8f8f8;
 }
 
 .reviews-item:not(:last-child) {
@@ -467,8 +478,9 @@
 .contacts-content {
     padding: 20px 280px 20px 40px;
     border-radius: 20px;
-    position: relative;    /* Нужно для работы z-index */
-    z-index: 1;            /* Контент поверх серой подложки (::before) */
+    background-color: #f8f8f8;
+    /* position: relative;    Нужно для работы z-index
+    z-index: 1;               Контент поверх серой подложки (::before)  УБРАЛ 01.09.2026*/
 }
 
 .contacts-text-wrapper {
@@ -511,6 +523,7 @@
     border-radius: 15px;
     padding: 20px 40px;
     padding-right: 80px;
+    background-color: #242424;
     color: #fff;                  /* Белый цвет текста */
     font-size: 40px;                /* Размер шрифта */
     font-weight: 700;               /* Жирный шрифт */
@@ -547,6 +560,7 @@
 
 .sidebar {
     padding: 40px 0 40px 20px;
+    background-color: #242424;
     color: #fff;
 }
 
@@ -611,7 +625,8 @@
 
 .page-footer {
     padding: 30px 0;
-    color: #000000;
+    background-color: #242424;
+    color:#fff;
 }
 
 .page-footer .container {
