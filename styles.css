@@ -301,8 +301,10 @@
     font-size: 16px;
 }
 
-.prices-table tr:nth-child(odd) td {  /* Выбираем все ячейки <td> в нечётных строках таблицы */
-    background-color: #f2f2f2;      /* Красим их в светло-серый — получается "зебра" для удобства чтения */
+/* Выбираем все ячейки <td> в нечётных строках таблицы */
+/* Красим их в светло-серый — получается "зебра" для удобства чтения */
+.prices-table tr:nth-child(odd) td {
+    background-color: #f2f2f2;
 }
 
 .prices-table th:first-child,
@@ -479,8 +481,6 @@
     padding: 20px 280px 20px 40px;
     border-radius: 20px;
     background-color: #f8f8f8;
-    /* position: relative;    Нужно для работы z-index
-    z-index: 1;               Контент поверх серой подложки (::before)  УБРАЛ 01.09.2026*/
 }
 
 .contacts-text-wrapper {
